@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',  
   },
   btn: {
-    marginVertical: 10,
+    marginVertical: 5,
     width: 200,
     height: 50,
     borderRadius: 8,

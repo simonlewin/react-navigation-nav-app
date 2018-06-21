@@ -7,25 +7,28 @@ class StartScreen extends Component {
   constructor(props) {
     super(props);
     this.onPress = this.onPress.bind(this);
-    this.onPressGreyScale = this.onPressGreyScale.bind(this);
+    this.onPressGreyscale = this.onPressGreyscale.bind(this);
     this.onPressBlurred = this.onPressBlurred.bind(this);
   }
 
   onPress() {
     this.props.navigation.navigate('Image', {
-      title: 'Regular Image'
+      title: 'Regular Image',
+      uri: 'https://picsum.photos/400/600/?random'
     });
   }
 
-  onPressGreyScale() {
+  onPressGreyscale() {
     this.props.navigation.navigate('Image', {
-      title: 'Greyscale Image'
+      title: 'Greyscale Image',
+      uri: 'https://picsum.photos/g/400/600/?random'
     });
   }
 
   onPressBlurred() {
     this.props.navigation.navigate('Image', {
-      title: 'Blurred Image'
+      title: 'Blurred Image',
+      uri: 'https://picsum.photos/400/600/?random&blur'
     });
   }
 
@@ -33,7 +36,7 @@ class StartScreen extends Component {
     return (
       <View style={styles.container}>
         <Button onPress={this.onPress} label={'View Image'}/>
-        <Button onPress={this.onPressGreyScale} label={'View Greyscale Image'}/>
+        <Button onPress={this.onPressGreyscale} label={'View Greyscale Image'}/>
         <Button onPress={this.onPressBlurred} label={'View Blurred Image'}/>
       </View>
     )
